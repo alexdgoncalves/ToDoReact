@@ -1,0 +1,73 @@
+.task {
+  list-style: none;
+  border: 1px solid var(--gray-400);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--gray-500);
+  gap: .75rem;
+  align-items: flex-start;
+}
+
+.round {
+  position: relative;
+}
+
+.round label {
+  border: 2px solid var(--blue-200);
+  border-radius: 50%;
+  cursor: pointer;
+  height: 19px;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  width: 19px;
+}
+
+.round label:after {
+  border: 1.9px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 4px;
+  left: 3px;
+  top: 4px;
+  opacity: 0;
+  position: absolute;
+  transform: rotate(-45deg);
+  width: 8px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.task:has(input[type="checkbox"]:checked) {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.round input[type="checkbox"]:checked+label {
+  background-color: var(--purple-200);
+  border-color: var(--purple-200);
+}
+
+.round input[type="checkbox"]:checked+label:after {
+  opacity: 1;
+}
+
+.task p {
+  width: 90%;
+  line-height: 1.4rem;
+}
+
+.task button {
+  background-color: transparent;
+  border: 0;
+  color: var(--gray-300);
+  cursor: pointer;
+
+  line-height: 0;
+  border-radius: 2px;
+}

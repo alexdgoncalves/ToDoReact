@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.newTask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+
+  position: relative;
+  height: 3.375rem;
+  bottom: calc(3.375rem / 2);
+  margin-bottom: 3rem;
+}
+
+.newTask input {
+  width: 46rem;
+  border-radius: 8px;
+  padding: 1rem;
+  border: var(--gray-700) 1px solid;
+  background-color: var(--gray-500);
+  font-weight: 400;
+  color: var(--white);
+}
+
+.newTask button {
+  display: flex;
+  gap: .5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 0;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--blue-200);
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info p {
+  font-weight: bold;
+  display: flex;
+  gap: .6rem;
+}
+
+.create {
+  color: var(--blue-100);
+}
+
+.done {
+  color: var(--purple-100);
+}
+
+.info p span {
+  font-weight: 600;
+  font-size: 0.79rem;
+  color: var(--white);
+  border-radius: 999px;
+  background-color: var(--gray-400);
+  padding: 2px 8px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: .875rem;
+  margin-top: 1.5rem;
+}
